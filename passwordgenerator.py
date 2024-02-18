@@ -1,5 +1,5 @@
 class Authenticate:
-
+    
     def __init__(self):
         self.passwords = {}
 
@@ -9,13 +9,7 @@ class Authenticate:
             self.passwords[name[0]] = []
             print("Password added successfully!")
 
-    def search_password(self, letter):
-        letter = letter.lower()
-        if letter in self.passwords:
-            return self.passwords[letter]
-        else:
-            return None
-
+    # You can add a search_password method here if needed
 
 def main():
     authenticator = Authenticate()
@@ -32,11 +26,8 @@ def main():
             authenticator.create_password(name, admno)
         elif choice == '2':
             letter = input("Enter the first letter to search password: ")
+            # You need to implement the search_password method
             result = authenticator.search_password(letter)
-            if result:
-                print(f"Passwords for letter {letter}: {result}")
-            else:
-                print(f"No passwords found for letter {letter}.")
         elif choice == '3':
             print("Exiting program. Goodbye!")
             break
