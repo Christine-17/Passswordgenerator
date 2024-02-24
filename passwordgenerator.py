@@ -10,7 +10,7 @@ class Authenticate:
             print("Password added successfully!")
 
     # You can add a search_password method here if needed
-
+            
 def main():
     authenticator = Authenticate()
 
@@ -24,7 +24,8 @@ def main():
             name = input("Enter name: ")
             admno = input("Enter admno: ")
             authenticator.create_password(name, admno)
-        elif choice == '2':
+       
+elif choice == '2':
             letter = input("Enter the first letter to search password: ")
             # You need to implement the search_password method
             result = authenticator.search_password(letter)
